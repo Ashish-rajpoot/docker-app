@@ -1,3 +1,8 @@
-FROM tomcat:8
-COPY target/*.war /home/ubuntu/docker-app/myweb.war
-# Added to test webhook
+node{
+    
+    stage('SCM Checkout'){
+        git credentialsId: 'git-hub', url: 'https://github.com/Ashish-rajpoot/docker-app.git'
+    }
+    
+    
+}
